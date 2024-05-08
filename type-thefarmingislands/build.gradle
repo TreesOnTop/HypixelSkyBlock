@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'net.swofty'
+version '3.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'net.swofty:type-generic:3.0'
+    implementation 'net.swofty:commons:3.0'
+    implementation 'net.swofty:proxy.api:3.0'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+}

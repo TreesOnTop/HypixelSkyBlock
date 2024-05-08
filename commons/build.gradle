@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'net.swofty'
+version '3.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'net.swofty:packer:3.0'
+    implementation 'net.swofty:service.protocol:3.0'
+    implementation 'com.github.Minestom:Minestom:5c23713c03'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+}

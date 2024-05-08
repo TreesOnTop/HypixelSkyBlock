@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'net.swofty'
+version '3.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
+    maven { url 'https://repo.viaversion.com' }
+}
+
+dependencies {
+    implementation 'com.velocitypowered:velocity-api:3.3.0-SNAPSHOT'
+    implementation 'com.velocitypowered:velocity-proxy:3.3.0-SNAPSHOT'
+    implementation 'com.github.Swofty-Developments:AtlasRedisAPI:1.1.2'
+    implementation 'net.swofty:commons:3.0'
+    implementation 'net.raphimc:ViaLoader:2.2.14-SNAPSHOT'
+    implementation 'com.viaversion:viabackwards-common:4.10.1'
+    implementation 'com.viaversion:viarewind-common:3.1.1'
+    implementation 'com.viaversion:viaversion:4.10.1'
+    implementation 'io.netty:netty-all:4.1.109.Final'
+    implementation 'net.bytebuddy:byte-buddy:1.14.14'
+    implementation 'net.bytebuddy:byte-buddy-agent:1.14.14'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
